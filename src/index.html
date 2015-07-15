@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="todomvc">
+    <head>
+        <meta charset="utf-8">
+        <title>ngES7</title>
+        <link rel="stylesheet" href="styles/index.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <section id="todoapp" ng-controller="TodoController as ctrl">
+            <header id="header">
+                <h1>todos</h1>
+                <form id="todo-form" ng-submit="ctrl.addTodo()">
+                    <input id="new-todo" placeholder="What needs to be done?" ng-model="ctrl.newTodo.title" autofocus>
+                </form>
+            </header>
+            <section id="main" ng-show="ctrl.todos.length" ng-cloak>
+                <input id="toggle-all" type="checkbox" ng-model="ctrl.allChecked" ng-click="ctrl.markAll()">
+                <label for="toggle-all">Mark all as complete</label>
+                <ul id="todo-list">
+                    <li ng-repeat="todo in ctrl.todos | filter:ctrl.filter track by $index" ng-class="{completed: todo.done, editing: todo == ctrl.editedTodo}">
+                        <todo data="todo" ctrl="ctrl"></todo>
+                    </li>
+                </ul>
+            </section>
+            <footer id="footer" ng-show="ctrl.todos.length" ng-cloak>
+                <span id="todo-count"><strong>{{ctrl.remainingCount}}</strong>
+                    <ng-pluralize count="ctrl.remainingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+                </span>
+                <ul id="filters">
+                    <li>
+                        <a ng-class="{selected: ctrl.filter.done === undefined} " href="#/" ng-click="ctrl.setFilter()">All</a>
+                    </li>
+                    <li>
+                        <a ng-class="{selected: ctrl.filter.done === 'active'}" href="#/active" ng-click="ctrl.setFilter('active')">Active</a>
+                    </li>
+                    <li>
+                        <a ng-class="{selected: ctrl.filter.done === 'done'}" href="#/done" ng-click="ctrl.setFilter('done')">Completed</a>
+                    </li>
+                </ul>
+                <button id="clear-completed" ng-click="ctrl.clearCompletedTodos()" ng-show="ctrl.completedCount">Clear completed</button>
+            </footer>
+        </section>
+    </body>
+</html>

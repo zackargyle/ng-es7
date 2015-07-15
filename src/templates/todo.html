@@ -1,0 +1,12 @@
+<div class="view">
+    <input class="toggle" type="checkbox" ng-model="todo.done">
+    <label ng-dblclick="ctrl.editTodo(todo)">{{todo.title}}</label>
+    <button class="destroy" ng-click="ctrl.removeTodo($index)"></button>
+</div>
+<form ng-submit="ctrl.saveTodo(todo)">
+    <input class="edit"
+        todo-escape="ctrl.revertEdit(todo)"
+        todo-focus="todo == ctrl.editedTodo"
+        ng-model="todo.title"
+        ng-blur="ctrl.saveTodo(todo)" >
+</form>
