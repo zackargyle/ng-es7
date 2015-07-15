@@ -1,7 +1,7 @@
 {
-  "name": "webpack-black-triangle",
+  "name": "ng-es7",
   "version": "0.1.0",
-  "description": "A minimal webpack/ES6 project template with a spinning black triangle",
+  "description": "An es7 exploration of AngularJS",
   "main": "src/main.js",
   "dependencies": {
     "core-js": "^0.9.18"
@@ -17,14 +17,12 @@
     "less-loader": "^2.2.0",
     "node-libs-browser": "^0.5.2",
     "style-loader": "^0.12.3",
-    "todomvc-common": "^1.0.0",
-    "todomvc-app-css": "^1.0.1",
     "webpack": "^1.10.0",
     "webpack-dev-server": "^1.10.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamesknelson/webpack-black-triangle.git"
+    "url": "https://github.com/zackargyle/ng-es7.git"
   },
   "scripts": {
     "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js"
@@ -37,6 +35,6 @@
     "es6",
     "babel"
   ],
-  "author": "James K Nelson <james@jamesknelson.com>",
+  "author": "Zack Argyle <zack.argyle@gmail.com>",
   "license": "MIT"
 }
