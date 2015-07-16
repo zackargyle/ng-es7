@@ -1,0 +1,15 @@
+<div class="pin u-pointer u-invisible">
+    <a href="{{pin.link}}">
+        <img ng-src="{{pin.image.original.url}}" width="236" />
+    </a>
+    <div class="pin-metadata" ng-if="pin.metadata.link">
+        <img ng-src="{{pin.metadata.link.favicon}}" height="11"/>
+        <div class="pin-site u-inline">from {{pin.metadata.link.site_name}}</div>
+        <div class="pin-title">{{pin.metadata.link.title}}</div>
+    </div>
+    <div class="pin-desc">{{pin.note}}</div>
+    <div class="pin-link">
+        <div>Pinned from</div>
+        <div class="pin-host">{{pin.host}}</div>
+    </div>
+</div>

@@ -4,6 +4,7 @@
   "description": "An es7 exploration of AngularJS",
   "main": "src/main.js",
   "dependencies": {
+    "angular-route": "^1.4.3",
     "core-js": "^0.9.18"
   },
   "devDependencies": {

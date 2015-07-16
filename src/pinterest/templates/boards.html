@@ -1,0 +1,9 @@
+<div class="boards">
+    <div class="content-header">Select a Board</div>
+    <div class="board u-pointer u-center"
+        ng-repeat="board in ctrl.boards"
+        ng-click="ctrl.viewPins(board)"
+        ng-style="{'background-image': 'url({{board.image['300x500'].url}})'}">
+        <div>{{board.name}}</div>
+    </div>
+</div>

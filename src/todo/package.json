@@ -1,0 +1,10 @@
+{
+  "name": "ng-es7-todo",
+  "version": "0.1.0",
+  "description": "An es7 exploration of AngularJS using Todo-MVC",
+  "main": "main.js",
+  "scripts": {
+    "start": "../../node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "license": "MIT"
+}

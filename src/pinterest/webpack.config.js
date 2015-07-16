@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: [
     'babel/polyfill',
-    './src/main',
+    './main',
     'webpack-dev-server/client?http://localhost:8080'
   ],
   output: {
@@ -17,7 +17,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        include: path.join(__dirname, 'src'),
+        include: path.join(__dirname, './'),
         loader: 'babel-loader',
         query: {stage: 0},
       },
@@ -28,6 +28,6 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: "./src"
+    contentBase: "./"
   }
 };

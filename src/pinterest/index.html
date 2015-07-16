@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="pinterest">
+    <head>
+        <meta charset="utf-8">
+        <title>ngPinterest-ES7</title>
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/pin.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+        <script src="lib/pinterest-sdk.min.js"></script>
+        <script src="lib/image-loaded.min.js"></script>
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-route.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-body">
+                <div class="header-right u-pointer">
+                    <img class="header-logo" src="resources/logo.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="content" ng-view></div>
+
+        <div class="loading-wrapper" ng-if="loading" ng-init="loading = false">
+            <div>Loading</div>
+            <img class="loader" src="resources/logo.png">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<div class="pins">
+    <div class="content-header">{{ ctrl.board.name }}</div>
+    <div class="pin-wrapper">
+        <pin ng-repeat="pin in ctrl.pins" ng-init="ctrl.layout()" pin="pin" grid="ctrl.grid"></pin>
+    </div>
+</div>
