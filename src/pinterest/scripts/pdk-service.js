@@ -39,6 +39,15 @@ class Pdk {
     }
 
     /*
+     * Attempt to login via the SDK popup window.
+     */
+    logout() {
+        return new Promise((resolve, reject) => {
+            PDK.logout(resolve);
+        });
+    }
+
+    /*
      * Fetch the user information
      */
     initUser() {
@@ -53,10 +62,10 @@ class Pdk {
         });
     }
 
+    /*
+     * Fetch the user's pins belonging to board with <boardId>
+     */
     getPins(boardId) {
-        // if (this.cache.pins[boardId]) {
-        //     return Promise.resolve(this.cache.pins[boardId]);
-        // }
         var params = { fields: Const.PDK_FIELDS_PIN };
         return new Promise((resolve, reject) => {
             PDK.request(`/boards/${boardId}/pins/`, params, function(response) {
@@ -65,10 +74,10 @@ class Pdk {
         });
     }
 
+    /*
+     * Fetch the user's boards
+     */
     getBoards() {
-        // if (this.cache.boards[this.user.id]) {
-        //     return Promise.resolve(this.cache.boards[boardId]);
-        // }
         return new Promise((resolve, reject) => {
             var params = { fields: Const.PDK_FIELDS_BOARDS };
             PDK.me('boards', params, (response) => {

@@ -19,11 +19,6 @@ class App extends ngApp {
                 $routeProvider.when(key, Const.Routes[key]);
             });
         });
-
-        /*
-         * Initialize User/SDK/Authentication
-         */
-        this.run((User) => User.init() );
     }
 }
 

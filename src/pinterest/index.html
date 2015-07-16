@@ -13,19 +13,9 @@
         <script src="main.js"></script>
     </head>
     <body>
-        <div class="header">
-            <div class="header-body">
-                <div class="header-right u-pointer">
-                    <img class="header-logo" src="resources/logo.png" />
-                </div>
-            </div>
-        </div>
 
+        <pin-header></pin-header>
         <div class="content" ng-view></div>
 
-        <div class="loading-wrapper" ng-if="loading" ng-init="loading = false">
-            <div>Loading</div>
-            <img class="loader" src="resources/logo.png">
-        </div>
     </body>
 </html>

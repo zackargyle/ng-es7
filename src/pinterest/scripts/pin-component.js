@@ -4,15 +4,19 @@ import {PIN_APP} from './const';
 /*
  * Base component directive for a pin.
  */
-@ngDirective(PIN_APP, { restrict: 'E', templateUrl: 'templates/pin.html' })
+@ngDirective(PIN_APP)
 class pin {
 
     constructor() {
-        this.replace = true;
-        this.scope = {
-            pin: '=',
-            grid: '='
-        }
+        angular.extend(this, {
+            templateUrl: 'templates/pin.html',
+            restrict: 'E',
+            replace: true,
+            scope: {
+                pin: '=',
+                grid: '='
+            }
+        });
     }
 
     /*
@@ -20,6 +24,7 @@ class pin {
      * masonry grid's layout function
      */
     onAddedToDom(scope, $elem) {
+        console.log('hi');
         imagesLoaded($elem[0], () => {
             scope.grid.appended($elem[0]);
             scope.grid.layout();

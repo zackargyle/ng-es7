@@ -8,7 +8,7 @@
         <div class="pin-title">{{pin.metadata.link.title}}</div>
     </div>
     <div class="pin-desc">{{pin.note}}</div>
-    <div class="pin-link">
+    <div class="pin-link" ng-if="pin.host">
         <div>Pinned from</div>
         <div class="pin-host">{{pin.host}}</div>
     </div>

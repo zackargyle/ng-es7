@@ -40,6 +40,17 @@ body {
 	margin: 5px auto;
 }
 
+.header-logout {
+	cursor: pointer;
+	display: inline-block;
+	margin-top: 5px;
+	width: 40px;
+}
+
+.header-logout:hover {
+	opacity: .5;
+}
+
 .header-right {
 	float: right;
 }

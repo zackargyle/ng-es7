@@ -26,10 +26,10 @@ class User {
      * Handle unauthenticated routing and logic
      */
     isAuthenticated() {
-        if (!this.loggedIn) {
+        if (!this.id) {
             this.$location.path(Const.PATH_BASE);
         }
-        return this.loggedIn;
+        return !!this.id;
     }
 
     /*
@@ -50,11 +50,20 @@ class User {
     }
 
     /*
+     * Handle logout via the pinterest SDK
+     */
+    logout() {
+        return this.Pdk.logout().then(() => {
+            this.$location.path(Const.PATH_BASE);
+        });
+    }
+
+    /*
      * Handle success callback of SDK login
      */
-    setup(user) {
-        angular.extend(this, user);
-        this.loggedIn = true;
+    setup(response) {
+        angular.extend(this, response.data);
+        this.$rootScope.$emit('login');
         this.viewBoards();
     }
 

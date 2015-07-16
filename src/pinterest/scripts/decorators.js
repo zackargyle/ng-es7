@@ -31,7 +31,7 @@ function ngService(app, dependencies) {
 function module(app, dependencies=[], method) {
     return function(target) {
         target.prototype.$inject = target.$inject = dependencies;
-        target.prototype.$extend = $extend;
+        target.prototype.$extend = target::$extend(dependencies);
         angular.module(app)[method](target.name, target);
     };
 }
@@ -39,22 +39,29 @@ function module(app, dependencies=[], method) {
 /*
  * Create and register a new component directive
  */
-function ngDirective(app, options={}) {
+function ngDirective(app, dependencies=[], options={}) {
     return function(target) {
-        angular.extend(target.prototype, options, { link: target.onAddedToDom });
+        target.prototype.$extend = target::$extend(dependencies);
         return angular.module(app).directive(target.name, () => {
-            var directive = new target();
-            directive.link = directive.onAddedToDom;
+            let injector = angular.element(document.documentElement).injector();
+            let deps = dependencies.map((dep) => injector.get(dep) );
+            let directive = new target(...deps);
+            directive.link = directive::directive.onAddedToDom;
             return directive;
         });
     };
 }
 
-function $extend(args) {
-    let names = this.$inject || [];
-    [].forEach.call(args, (arg, index) => {
-        this[names[index]] = arg;
-    });
+/*
+ * Closure for extending dependency injected models onto
+ * the <this> of the corresponding module
+ */
+function $extend(dependencies) {
+    return (args) => {
+        [].forEach.call(args, (arg, index) => {
+            this.prototype[dependencies[index]] = arg;
+        });
+    }
 }
 
 export default {
