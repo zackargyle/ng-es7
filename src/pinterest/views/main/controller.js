@@ -1,5 +1,5 @@
-import {ngController} from './decorators';
-import {PIN_APP} from './const';
+import {ngController} from '../../decorators';
+import {PIN_APP} from '../../const';
 
 /*
  * Main controller for the application. Manages login.

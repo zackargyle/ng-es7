@@ -1,5 +1,6 @@
-import {ngService} from './decorators';
-import Const from './const';
+import {ngService} from '../decorators';
+import Const from '../const';
+
 
 /*
  * Service for interacting with localstorage.

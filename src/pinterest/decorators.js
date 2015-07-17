@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 /*
  * Create and register a new base module
  */

@@ -1,5 +1,5 @@
-import {ngService} from './decorators';
-import Const from './const';
+import {ngService} from '../decorators';
+import Const from '../const';
 
 /*
  * Service for managing user data and state.

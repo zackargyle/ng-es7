@@ -1,5 +1,5 @@
-import {ngController} from './decorators';
-import {PIN_APP} from './const';
+import {ngController} from '../../decorators';
+import {PIN_APP} from '../../const';
 
 /*
  * Controller for the board view. Manages layout and

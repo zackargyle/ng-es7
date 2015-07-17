@@ -1,5 +1,5 @@
-import {ngDirective} from './decorators';
-import {PIN_APP} from './const';
+import {ngDirective} from '../../decorators';
+import {PIN_APP} from '../../const';
 
 /*
  * Base component directive for the header.
@@ -10,7 +10,7 @@ class pinHeader {
     constructor() {
         this.$extend(arguments);
         angular.extend(this, {
-            templateUrl: 'templates/header.html'
+            templateUrl: 'components/header/template.html'
         });
     }
 

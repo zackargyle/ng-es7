@@ -1,5 +1,5 @@
-import {ngDirective} from './decorators';
-import {PIN_APP} from './const';
+import {ngDirective} from '../../decorators';
+import {PIN_APP} from '../../const';
 
 /*
  * Base component directive for a pin.
@@ -9,7 +9,7 @@ class pin {
 
     constructor() {
         angular.extend(this, {
-            templateUrl: 'templates/pin.html',
+            templateUrl: 'components/pin/template.html',
             restrict: 'E',
             replace: true,
             scope: {
@@ -24,7 +24,6 @@ class pin {
      * masonry grid's layout function
      */
     onAddedToDom(scope, $elem) {
-        console.log('hi');
         imagesLoaded($elem[0], () => {
             scope.grid.appended($elem[0]);
             scope.grid.layout();
