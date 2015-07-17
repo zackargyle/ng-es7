@@ -1,0 +1,42 @@
+.boards {
+    text-align: left;
+    width: auto;
+}
+
+.board {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+    height: 236px;
+    margin: 14px 7px 0;
+    position: relative;
+    width: 236px;
+}
+
+.board:before {
+    background-color: rgba(10,10,10,.7);
+    border-radius: 8px;
+    bottom: 0;
+    content: '';
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+.board:hover:before {
+    background-color: rgba(10,10,10,.4);
+}
+
+.board div {
+    font-size: 24px;
+    left: 0;
+    letter-spacing: 1px;
+    line-height: 25px;
+    position: absolute;
+    right: 0;
+    top: 40%;
+}

@@ -1,0 +1,55 @@
+body {
+	background-color: rgb(233,233,233);
+	font-family: "Helvetica Neue","Helvetica","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo","ＭＳ Ｐゴシック",arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+@media (min-width: 800px) {
+	.content, .header-body {
+		width: 750px;
+	}
+}
+
+@media (min-width: 1050px) {
+	.content, .header-body {
+		width: 1000px;
+	}
+}
+
+@media (min-width: 1300px) {
+	.content, .header-body {
+		width: 1250px;
+	}
+}
+
+/*		App Style 		*/
+
+.content {
+	margin: 70px auto;
+	text-align: center;
+}
+
+.content-header {
+	color: rgb(60,60,60);
+	font-size: 26px;
+	text-align: center;
+}
+
+/*		Utility Classes		*/
+
+.u-pointer:hover {
+	cursor: pointer;
+}
+
+.u-inline {
+	display: inline-block;
+}
+
+.u-center {
+	text-align: center;
+}
+
+.u-invisible {
+	visibility: hidden;
+}
