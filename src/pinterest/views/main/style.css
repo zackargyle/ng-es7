@@ -1,6 +1,6 @@
 .login {
     background-color: white;
-    background-image: url(../../resources/login-background.jpg);
+    background-image: url(/resources/login-background.jpg);
     background-size: cover;
     border: 1px solid rgba(100,100,100,.2);
     border-radius: 6px;

@@ -1,6 +1,8 @@
 import {ngApp} from './decorators';
 import Const from './const';
 
+require('./index.css')
+
 /*
  * Create the base app module. Must be an import
  * for main.js since imports are hoisted.

@@ -1,5 +1,6 @@
 import {ngController} from '../../decorators';
 import {PIN_APP} from '../../const';
+require('./style.css');
 
 /*
  * Controller for the board view. Manages layout and
