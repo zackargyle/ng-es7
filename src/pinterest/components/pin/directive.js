@@ -1,6 +1,6 @@
 import {ngDirective} from '../../decorators';
 import {PIN_APP} from '../../const';
-require('./style.css');
+require('./style.scss');
 
 /*
  * Base component directive for a pin.

@@ -1,0 +1,64 @@
+/*       Pin Component      */
+
+.pin {
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(153,153,153,1);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(153,153,153,1);
+    box-shadow: 1px 1px 3px 0px rgba(153,153,153,1);
+    border-radius: 7px;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 17px;
+    margin: 14px 7px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 236px;
+    word-wrap: break-word;
+
+    img {
+        border-bottom: 1px solid rgb(230,230,230);
+        overflow: hidden;
+    }
+
+    div {
+        padding: 10px 16px;
+    }
+
+    .pin-metadata {
+        border-bottom: 1px solid rgb(230,230,230);
+    }
+
+    .pin-site {
+        color: rgb(200,200,200);
+        font-size: 10px;
+        font-weight: lighter;
+        margin-left: 10px;
+        vertical-align: text-bottom;
+    }
+
+    .pin-title {
+        color: rgb(100,100,100);
+        font-size: 14px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+
+    .pin-desc {
+        border-bottom: 1px solid rgb(230,230,230);
+        color: rgb(51,51,51);
+        max-height: 110px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 216px;
+    }
+
+    .pin-link {
+        color: rgb(153,153,153);
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .pin-host {
+        color: rgb(113,113,113);
+    }
+}

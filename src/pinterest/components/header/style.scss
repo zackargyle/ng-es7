@@ -1,0 +1,33 @@
+.header {
+    background-color: #fff;
+    webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    padding: 5px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    .header-body {
+        margin: 5px auto;
+    }
+
+    .header-logout {
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 5px;
+        width: 40px;
+    }
+
+    .header-logout:hover {
+        opacity: .5;
+    }
+
+    .header-right {
+        float: right;
+    }
+
+    .header-logo {
+        height: 30px;
+    }
+}

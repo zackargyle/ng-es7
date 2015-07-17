@@ -1,7 +1,7 @@
 import {ngApp} from './decorators';
 import Const from './const';
 
-require('./index.css')
+require('./index.scss')
 
 /*
  * Create the base app module. Must be an import

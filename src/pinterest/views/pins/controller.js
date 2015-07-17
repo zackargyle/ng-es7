@@ -1,6 +1,6 @@
 import {ngController} from '../../decorators';
 import {PIN_APP} from '../../const';
-require('./style.css');
+require('./style.scss');
 
 /*
  * Controller for the pin view. Manages layout.
